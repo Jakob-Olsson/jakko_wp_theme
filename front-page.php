@@ -10,9 +10,7 @@
 get_header();
  ?>
 
-<div class="content">
-Content
-</div>
+<?php get_template_part('template-parts/sections/hero'); ?>
 
 <?php 
 
