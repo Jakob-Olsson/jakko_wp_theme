@@ -1,10 +1,45 @@
+@keyframes animateUp {
+  from {
+    transform: translateY(200px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .hero-section {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   height: 100vh;
   overflow: hidden;
+  perspective: 1500px;
+  transform-style: preserve-3d;
+
+  .hero-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.11);
+    mix-blend-mode: color-burn;
+    z-index: 100;
+  }
+
+  .hero-image-foreground {
+    transform: translateZ(-50px) scale(1.05);
+    z-index: 3;
+  }
 
   .custom-logo-link {
     width: 100%;
@@ -12,20 +47,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 2;
+
+    .custom-logo {
+      width: 450px;
+      height: auto;
+      animation: animateUp 1s;
+    }
   }
 
-  .custom-logo {
-    width: 450px;
-    height: auto;
-    position: fixed;
+  .hero-image-background {
+    transform: translateZ(-100px) scale(1.1);
+    z-index: 1;
   }
 }
 
 .hero-image {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   object-fit: cover;
 }

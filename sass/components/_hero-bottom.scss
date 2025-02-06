@@ -1,0 +1,42 @@
+.hero-bottom-container {
+  bottom: 0;
+  margin-bottom: 60px;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: 200;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5rem;
+
+  .hero-socials-container {
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      color: white;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .coordinates-container {
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    i {
+      margin-right: 1rem;
+    }
+  }
+}

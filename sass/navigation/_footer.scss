@@ -1,0 +1,77 @@
+// Styling for the footer
+
+footer {
+  height: 640px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .footer-content-container {
+    padding-top: 13rem;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .mail-link {
+      color: white;
+      text-decoration: none;
+      font-size: 36px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .socials-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 4rem;
+
+      a {
+        margin: 1rem;
+        width: 32px;
+        height: 32px;
+        color: white;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    .custom-logo-link {
+      width: 200px;
+
+      .custom-logo {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    p {
+      color: white;
+      margin-top: auto;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .footer-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .footer-fade {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, black 0, rgba(0, 0, 0, 0.219));
+  }
+}

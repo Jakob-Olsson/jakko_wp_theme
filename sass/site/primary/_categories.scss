@@ -1,0 +1,80 @@
+.category-main-container {
+  width: 100%;
+  height: 800px;
+  margin-top: -150px;
+  background: linear-gradient(to top, black 83%, transparent 100%);
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 300px;
+
+  .category-container:hover .text-container h3 {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .category-container:hover .read-more {
+    opacity: 1;
+  }
+
+  // For each category image
+  .category-container {
+    margin: 30px;
+    width: 333px;
+    height: 428px;
+    background-color: white;
+    position: relative;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover img {
+      filter: brightness(50%);
+    }
+
+    a {
+      .text-container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        position: absolute;
+
+        h3 {
+          color: white;
+          font-weight: 400;
+          z-index: 11;
+        }
+      }
+
+      .category-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .category-container-fade {
+        background-color: aliceblue;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: linear-gradient(to bottom, transparent 90%, black 100%);
+      }
+
+      .read-more {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: white;
+        opacity: 0; /* Dold från början */
+        transition: opacity 0.2s ease-in-out;
+        z-index: 20;
+      }
+    }
+  }
+}

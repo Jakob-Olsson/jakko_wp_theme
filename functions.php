@@ -19,6 +19,14 @@ function jakko_standard_equeue_scripts() {
     wp_register_script('main-js', get_template_directory_uri().'/assets/main.js', [], filemtime( get_template_directory().'/assets/main.js'), true );
     wp_enqueue_script( 'main-js' );
 
+    // Register and enqueue the main JavaScript file
+    wp_register_script('animations-js', get_template_directory_uri().'/assets/animations.js', [], filemtime( get_template_directory().'/assets/animations.js'), true );
+    wp_enqueue_script( 'animations-js' );
+
+    // Register and enqueue the preloader JavaScript file
+    wp_register_script('preloader-js', get_template_directory_uri().'/assets/preloader.js', [], filemtime( get_template_directory().'/assets/preloader.js'), true );
+    wp_enqueue_script( 'preloader-js' );
+
 
 }
 // Load scripts and styles in WordPress
@@ -55,6 +63,34 @@ register_nav_menus(
         'mobile-menu' => 'Mobile Menu Location',
     )
 );
+
+
+function skapa_foto_posttype() {
+    $args = array(
+        'labels' => array(
+            'name' => 'Foton',
+            'singular_name' => 'Foto',
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'supports' => array('title', 'editor', 'thumbnail'),
+        'rewrite' => array('slug' => 'foton'),
+    );
+    register_post_type('foto', $args);
+}
+add_action('init', 'skapa_foto_posttype');
+
+function skapa_foto_taxonomi() {
+    $args = array(
+        'labels' => array(
+            'name' => 'Kategorier',
+            'singular_name' => 'Kategori',
+        ),
+        'hierarchical' => true, // Gör taxonomin hierarkisk, som kategorier
+    );
+    register_taxonomy('foto_kategori', 'foto', $args);
+}
+add_action('init', 'skapa_foto_taxonomi');
 
 
 ?>
