@@ -23,11 +23,6 @@ function jakko_standard_equeue_scripts() {
     wp_register_script('animations-js', get_template_directory_uri().'/assets/animations.js', [], filemtime( get_template_directory().'/assets/animations.js'), true );
     wp_enqueue_script( 'animations-js' );
 
-    // Register and enqueue the preloader JavaScript file
-    wp_register_script('preloader-js', get_template_directory_uri().'/assets/preloader.js', [], filemtime( get_template_directory().'/assets/preloader.js'), true );
-    wp_enqueue_script( 'preloader-js' );
-
-
 }
 // Load scripts and styles in WordPress
 add_action('wp_enqueue_scripts', 'jakko_standard_equeue_scripts');

@@ -38,17 +38,48 @@ header {
       border-radius: 50%;
       border: none;
       background-color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      cursor: pointer;
+      position: relative;
 
-      div {
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.528);
+
+        span {
+          background-color: white;
+        }
+      }
+
+      span {
         background-color: black;
         height: 3px;
         width: 23px;
         border-radius: 2px;
-        margin: 2px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.3s ease;
+      }
+
+      span:nth-child(1) {
+        top: 33%;
+      }
+      span:nth-child(3) {
+        top: 66%;
+      }
+
+      &.opened {
+        span:nth-child(1) {
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+        span:nth-child(2) {
+          opacity: 0;
+        }
+        span:nth-child(3) {
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
       }
     }
 

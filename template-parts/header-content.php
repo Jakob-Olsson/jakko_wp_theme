@@ -11,10 +11,10 @@
  $email = get_field('e-post_adress');
  ?>
 <div class="header-content header-content-1">
-    <button class="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
+    <button class="hamburger closed">
+        <span></span>
+        <span></span>
+        <span></span>
     </button>
 </div>
 

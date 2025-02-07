@@ -1,0 +1,51 @@
+.menu-screen-main-container {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  position: fixed;
+  background-color: black;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+
+  // Animation stuff
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0 100%);
+  pointer-events: none;
+
+  div {
+    margin-top: 10rem;
+    ul {
+      text-align: center;
+      list-style: none;
+      display: flex;
+      flex-direction: column-reverse;
+
+      // 🎯 Styling för aktiv sida
+      li.current_page_item {
+        a {
+          color: white;
+          font-weight: bold; // Valfri effekt för att göra det tydligare
+        }
+      }
+
+      li {
+        margin-bottom: 1rem;
+        a {
+          font-size: 2rem;
+          text-decoration: none;
+          color: rgb(187, 187, 187);
+          display: inline-block;
+
+          &:hover {
+            color: white;
+            transform: scale(1.1);
+            transition: transform 0.1s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
