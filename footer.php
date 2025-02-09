@@ -33,7 +33,10 @@ $facebook = get_field('facebook');
 
 
     <div class="footer-fade"></div>
+    <?php if ($footerImage): ?>
     <img src="<?php echo $footerSize; ?>" alt="The footer image" class="footer-image">
+<?php endif; ?>
+
    </footer>
 
    <?php wp_footer(); ?>

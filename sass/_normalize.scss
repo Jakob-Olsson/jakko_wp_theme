@@ -4,7 +4,10 @@
   box-sizing: border-box;
 }
 
-body {
+body,
+html {
   font-family: "Recursive", serif;
   font-variation-settings: "slnt" 0, "CASL" 0, "CRSV" 0, "MONO" 1;
+  width: 100%;
+  overflow-x: hidden;
 }

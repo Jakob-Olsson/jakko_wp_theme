@@ -1,0 +1,26 @@
+.coming-soon-container {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h5 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 5rem;
+  }
+
+  .custom-logo-link {
+    width: 200px;
+    height: 100px;
+
+    .custom-logo {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

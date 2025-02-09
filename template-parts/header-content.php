@@ -23,11 +23,3 @@
 <div class="header-content header-content-3"><a href="mailto:<?php echo $email ?>" class="contact-button">Kontakta mig</a></div>
 
 
-<!-- Menu navigation -->
-
-<!-- <?php wp_nav_menu(
-        array(
-            'theme_location' => 'header-menu',
-            
-            )
-        ); ?> -->

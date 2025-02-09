@@ -21,9 +21,8 @@
       text-align: center;
       list-style: none;
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
 
-      // 🎯 Styling för aktiv sida
       li.current_page_item {
         a {
           color: white;
@@ -33,6 +32,11 @@
 
       li {
         margin-bottom: 1rem;
+
+        // Animation stuff
+        transform: translateY(30px);
+        opacity: 0;
+
         a {
           font-size: 2rem;
           text-decoration: none;

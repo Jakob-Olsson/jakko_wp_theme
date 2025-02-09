@@ -1,7 +1,11 @@
 // Imports from all the primary styles.
 
-@use "primary/hero";
+@use "front-page/hero";
 
-@use "primary/categories";
+@use "front-page/categories";
 
-@use "primary/about";
+@use "front-page/about-section";
+
+@use "about-page/about";
+
+@use "gallery-page/gallery";

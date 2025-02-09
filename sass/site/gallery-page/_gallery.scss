@@ -1,0 +1,25 @@
+.main-gallery-container {
+  background-color: black;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  padding: 10rem 5rem;
+
+  .gallery-container {
+    padding-top: 10rem;
+    width: 100%; // Anpassa vid behov
+    min-height: fit-content;
+    margin: 0 auto;
+
+    .gallery-item {
+      width: 200px;
+      margin-bottom: 5px;
+
+      img {
+        width: 100% !important;
+        height: auto !important;
+      }
+    }
+  }
+}

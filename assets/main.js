@@ -1,22 +1,25 @@
 // main.js
 
+// If we are on the home page or the root path, add the parallax effect
+if (document.body.classList.contains('home') || window.location.pathname === '/') {
 
-// Parallax eventListener
-window.addEventListener('scroll', function () {
-    let scrollPosition = window.scrollY;
+    // Parallax eventListener
+    window.addEventListener('scroll', function () {
+        let scrollPosition = window.scrollY;
 
-    // Förflytta bakgrunden
-    document.querySelector('.hero-image-background').style.transform =
-        `translateY(${scrollPosition * 0.5}px)`;  // Ändra multiplikatorn för att justera hastigheten
+        // Background
+        document.querySelector('.hero-image-background').style.transform =
+            `translateY(${scrollPosition * 0.5}px)`;
 
-    // förflytta loggan
-    document.querySelector('.custom-logo-link').style.transform =
-        `translateY(${scrollPosition * 0.4}px)`;
+        // Logo
+        document.querySelector('.custom-logo-link').style.transform =
+            `translateY(${scrollPosition * 0.4}px)`;
 
 
-    // Förflytta förgrunden
-    document.querySelector('.hero-image-foreground').style.transform =
-        `translateY(${scrollPosition * 0.2}px)`;  // Snabbare rörelse för förgrunden
-});
+        // Foreground
+        document.querySelector('.hero-image-foreground').style.transform =
+            `translateY(${scrollPosition * 0.2}px)`;
+    });
+}
 
 
